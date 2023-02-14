@@ -1,19 +1,13 @@
 import './../style/register.css'
 import { EmailAlert, PwAlert, PwCheck } from '../components/registerAlert';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 function RegisterUserInfo({ onChangeIndex, onBackIndex }) {
-  // const [account, setAccount] = useState({
-  //   email: ' ',
-  //   pw: ' ',
-  // });
-  // const onChangeAccount = (e) => {
-  //   setAccount({
-  //     ...account,
-  //     [e.target.name]: e.target.value
-  //   })
-  // }
-
+  const id = useSelector((state) => state.user.length)-1
+  console.log(id)
+  const email = useSelector((state) => state.user[id].email)
+  console.log(email)
   return (
     <section>
       <div className='register-form'>
@@ -31,7 +25,7 @@ function RegisterUserInfo({ onChangeIndex, onBackIndex }) {
             </div>
             <div>
               <h3>이메일</h3>
-              <input />
+              <input value={email} readOnly/>
             </div>
             <div className='user-phone'>
               <h3>휴대폰 번호</h3>

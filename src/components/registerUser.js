@@ -1,6 +1,8 @@
 import './../style/register.css'
 import { EmailAlert, PwAlert, PwCheck } from '../components/registerAlert';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addAccount } from '../store/userSlice';
 
 function RegisterUser({ onChangeIndex }) {
   const [account, setAccount] = useState({
@@ -10,6 +12,9 @@ function RegisterUser({ onChangeIndex }) {
   const [pwCheck, setPwCheck] = useState()
   const [pwType, setPwType] = useState('password')
   const [checkType, setCheckType] = useState('password')
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+  const id = state.user.length;
 
   const onChangeAccount = (e) => {
     setAccount({
@@ -20,6 +25,12 @@ function RegisterUser({ onChangeIndex }) {
 
   const onChangePwCheck = (e) => {
     setPwCheck(e.target.value)
+  }
+
+  const onAddAccount = () => {
+    dispatch(addAccount({ id: id, email: account.email, pw: account.pw }))
+    onChangeIndex()
+    console.log('완료?')
   }
 
   return (
@@ -46,7 +57,7 @@ function RegisterUser({ onChangeIndex }) {
             <input type={checkType} className='pw-check' placeholder='비밀번호 확인을 입력해주세요.' onChange={onChangePwCheck}/>
             <PwCheck pw={account.pw} pwCheck={pwCheck}/>
           </article>
-          <button onClick={() => onChangeIndex()}>다음</button>
+          <button onClick={onAddAccount}>다음</button>
         </div>
       </div>
     </section>

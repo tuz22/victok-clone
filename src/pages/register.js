@@ -1,31 +1,25 @@
 import './../style/register.css'
+// import { EmailAlert, PwAlert, PwCheck } from '../components/registerAlert';
+import { useState } from 'react';
+import RegisterUser from '../components/registerUser';
+import TermsUse from '../components/termsUse';
+import RegisterUserInfo from '../components/registerUserInfo';
 
 function Register() {
-  return (
-    <section>
-      <div className='register-form'>
-        <h2>회원가입</h2>
-        <div className='input-form'>
-          <article>
-            <h3>이메일</h3>
-            <input placeholder='이메일을 입력해주세요.'/>
-          </article>
-          <article>
-            <h3>비밀번호</h3>
-            <input placeholder='비밀번호를 입력해주세요.'/>
-            <div className='condition pw-condition'>
-              <ul>
-                <li>ㆍ최소 8글자</li>
-                <li>ㆍ영어 대문자 또는 소문자, 숫자, 특수문자 최소 1자씩 조합</li>
-              </ul>
-            </div>
-            <h3>비밀번호 확인</h3>
-            <input className='pw-check' placeholder='비밀번호 확인을 입력해주세요.'/>
-          </article>
-          <button>회원가입</button>
-        </div>
-      </div>
-    </section>
-  )
+  const [index, setIndex] = useState(0)
+  const onChangeIndex = () => {
+    setIndex(index+1)
+  };
+  const onBackIndex = () => {
+    setIndex(index-1)
+  };
+  switch (index) {
+    case 0 :
+      return <TermsUse onChangeIndex={onChangeIndex}/>
+    case 1 :
+      return <RegisterUser onChangeIndex={onChangeIndex}/>
+    case 2 :
+      return <RegisterUserInfo onChangeIndex={onChangeIndex} onBackIndex={onBackIndex}/>
+  }
 }
 export default Register;

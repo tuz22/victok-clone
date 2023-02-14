@@ -10,8 +10,6 @@ section {
   /* align-items: center; */
 }
 .register-form {
-  top: 156px;
-  left: 660px;
   width: 600px;
   height: 540px;
   background: #FFFFFF;
@@ -42,15 +40,22 @@ section {
 .register-form h3 {
   margin-top: 30px;
 }
-.register-form .input-form {
+.register-form .form {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
 }
 .register-form h3 {
   font-size: 14px;
   margin-bottom: 10px;
 }
-.register-form h3::before {
+.register-form .input-form {
+  align-items: center;
+  margin-bottom: 60px;
+}
+.register-form .input-form h3::before,
+.register-form .user-form h3::before {
   width: 10px;
   height: 10px;
   content: '*';
@@ -77,4 +82,102 @@ input:focus {
 }
 .pw-condition li {
   color: #162D59;
+}
+
+/* termsUse */
+.check-form {
+  display: flex;
+  flex-direction: column;
+  margin: 80px;
+}
+.check-form input[type='checkbox'] {
+  width: 24px;
+  height: 24px;
+}
+.check-form h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 5px;
+}
+.check-from article {
+  display: flex;
+  align-items: center;
+}
+.check-list {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.check-list h4 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 5px 30px;
+}
+.check-list span {
+  margin-left: 5px;
+}
+.check-list a {
+  color: rgb(215, 163, 95);
+  text-decoration: underline;
+  font-size: 13px;
+}
+.check-list-input {
+  display: flex;
+}
+
+/* userInfo */
+.user-form article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 80px;
+}
+.user-form h3 {
+  margin-top: 20px;
+}
+.user-phone {
+  display: flex;
+  flex-direction: column;
+}
+.phone-numb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.phone-numb input {
+  width: 280px;
+  margin-right: 3px;
+}
+.phone-numb button {
+  width: 125px;
+  height: 32px;
+  background: #162d59;
+  border-color: #162d59;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 0;
+}
+.phone-numb button:hover {
+  background: #2a4166;
+}
+.user-form footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+.user-form footer button {
+  width: 224px;
+  height: 48px;
+  font-size: 15px;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+.user-form footer .prev-btn {
+  background: #fff;
+  color: #162D59;
+  border: 1px solid #162D59;
+}
+.user-form .next-btn:hover {
+  background: black;
 }

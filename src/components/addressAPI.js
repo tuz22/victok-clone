@@ -1,33 +1,34 @@
+import './../style/register.css'
 import { useState } from "react";
 import DaumPostcode from "react-daum-postcode";
-function AddressAPI() {
-  const [openPostcode, setOpenPostcode] = useState(false);
-  const handle = {
-    // 버튼 클릭 이벤트
-    clickButton: () => {
-      setOpenPostcode(current => !current);
-    },
 
-    // 주소 선택 이벤트
-    selectAddress: (data) => {
-      console.log(`
-        주소: ${data.address},
-        우편번호: ${data.zonecode}
-      `)
-      setOpenPostcode(false);
-    },
+function AddressAPI({ getAddressData }) {
+  const [openPostcode, setOpenPostcode] = useState(false);
+  const onButton = () => {
+    setOpenPostcode(current => !current);
   }
+
+  const selectAddress = (data) => {
+    const address = data.address
+    const code = data.zonecode
+    getAddressData({'add' : address, 'code' : code })
+    setOpenPostcode(false);
+  }
+
   return (
     <div>
-      <button onClick={handle.clickButton}>toggle</button>
+      <button onClick={onButton} className='code-search-btn'>우편번호 검색</button>
 
       {openPostcode && 
         <DaumPostcode 
-          onComplete={handle.selectAddress}  // 값을 선택할 경우 실행되는 이벤트
-          autoClose={false} // 값을 선택할 경우 사용되는 DOM을 제거하여 자동 닫힘 설정
+          className='post-style'
+          onComplete={selectAddress}  // 값을 선택할 경우 실행되는 이벤트
+          autoClose={false}
           defaultQuery='판교역로 235' // 팝업을 열때 기본적으로 입력되는 검색어 
-      />}
+          />
+        }
     </div>
   )
+
 }
 export default AddressAPI;

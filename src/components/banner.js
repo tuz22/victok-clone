@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './../style/banner.css'
 
 function Banner() {
@@ -10,7 +11,9 @@ function Banner() {
           <div className='main-banner-p'>
             <p>이용자 라카사용기간에 따라 자동으로 알림톡을 보내드립니다.</p>
             <p>번거로운 일은 저희에게 맡기세요.</p>
-            <button className='main-btn'>지금 바로 시작하기 〉</button>
+            <Link to='/login'>
+              <button className='main-btn'>지금 바로 시작하기 〉</button>
+            </Link>
           </div>
         </article>
       </div>

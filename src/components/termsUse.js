@@ -30,7 +30,7 @@ function TermsUse({ onChangeIndex }) {
                 <label for='check1'/>
                 <h4>빅톡 서비스 이용약관 동의합니다.<span>(필수)</span></h4>
               </div>
-              <a href=''>자세히</a>
+              <a href='https://victok.notion.site/e8bb0ea024934aadb052205673d484f2'>자세히</a>
             </div>
             <div className='check-list'>
               <div className='check-list-input'>
@@ -38,7 +38,7 @@ function TermsUse({ onChangeIndex }) {
                 <label for='check2'/>
                 <h4>빅톡 개인정보 수집 및 이용에 동의합니다.<span>(필수)</span></h4>
               </div>
-              <a href=''>자세히</a>
+              <a href='https://victok.notion.site/36e0eaba20614ae9a2e09723dc797060'>자세히</a>
             </div>
             <div className='check-list'>
               <div className='check-list-input'>

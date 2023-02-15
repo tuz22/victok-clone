@@ -6,6 +6,8 @@ import Banner from './components/banner';
 import Login from './pages/login';
 import Register from './pages/register';
 import { Route, Routes } from 'react-router-dom';
+import Welcome from './pages/welcome';
+import FindPw from './pages/findPw';
 
 function App() {
   return (
@@ -20,6 +22,12 @@ function App() {
         }/>
         <Route path='/register' element={
           <Register />
+        }/>
+        <Route path='/welcome' element={
+          <Welcome />
+        }/>
+        <Route path='/findpw' element={
+          <FindPw />
         }/>
       </Routes>
       <Footer />

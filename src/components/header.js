@@ -20,7 +20,7 @@ function Header() {
             <Link to='/login'>로그인</Link>
           </li>
           <img src={dia} className='sub-dia' alt='dia'/>
-          <li>회원가입</li>
+          <Link to='/register'><li>회원가입</li></Link>
         </ul>
       </div>  
     </header>

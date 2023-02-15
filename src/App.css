@@ -71,7 +71,7 @@ header a {
   letter-spacing: var(--unnamed-character-spacing-0);
   text-align: left;
   word-break: keep-all;
-  font: normal normal 600 20px/24px Pretendard;
+  font-size: 20px;
   letter-spacing: 0px;
   color: #FFFFFF;
   opacity: 3;

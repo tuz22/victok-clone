@@ -22,7 +22,7 @@ function Register() {
     case 2 :
       return <RegisterUserInfo onChangeIndex={onChangeIndex} onBackIndex={onBackIndex}/>
     case 3 :
-      return <FacilityInfo />
+      return <FacilityInfo onChangeIndex={onChangeIndex}/>
   }
 }
 export default Register;

@@ -181,3 +181,110 @@ input:focus {
 .user-form .next-btn:hover {
   background: black;
 }
+
+/* facilityInfo */
+.facility-form {
+  display: flex;
+  align-items: center;
+  margin: 0 80px;
+}
+.facility-form select {
+  width: 203px;
+  height: 30px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #E3E3E3;
+  border-radius: 2px;
+  padding: 0 15px;
+  margin-bottom: 3px;
+  font-size: 14px;
+  transition: all .3s;
+  opacity: 1;
+}
+.facility-form .facility-type {
+  display: flex;
+  align-items: center;
+}
+.facility-type .name-wrap {
+  margin-left: 4px;
+}
+.facility-type .name-input {
+  width: 203px;
+}
+.facility-add .code-wrap {
+  display: flex;
+}
+.facility-add .code-input {
+  width: 290px;
+}
+.code-search-btn {
+  width: 116px;
+  height: 30px;
+  margin: 0 0 0 4px;
+  font-size: 14px;
+}
+.post-style {
+  position: absolute;
+  width: 400px !important;
+  height: 400px !important;
+  top: 50%;
+  left: 40%;
+  border: 1px solid black;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+}
+
+/* welcome */
+.welcome-form {
+  left: 50%;
+  width: 600px;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+}
+.form-wrap article {
+  display: flex;
+}
+.form-wrap h1 {
+  font-size: 44px;
+  color: #222222;
+  font-weight: 600;
+}
+.form-wrap span {
+  font-size: 44px;
+  font-weight: 100;
+}
+.form-wrap p {
+  font-size: 18px;
+  color: #A8A8A8;
+  margin: 10px 0 50px 0;
+}
+.form-wrap img {
+  width: 134px;
+  height: 137px;
+}
+.form-wrap button {
+  font-size: 18px;
+}
+
+/* findPw */
+.find-pw {
+  width: 600px;
+  height: 466px;
+}
+.findPw-form {
+  display: flex;
+  margin: 0 80px;
+}
+.find-phone-text p {
+  font-size: 15px;
+  color: #A8A8A8;
+}
+.phone-text {
+  color: #222222;
+}
+.findPw-form .next-btn {
+  width: 440px;
+}

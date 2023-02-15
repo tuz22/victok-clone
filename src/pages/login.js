@@ -18,7 +18,9 @@ function Login() {
                 <input type='checkbox' id='autoLogin'/>
                 <label for='autoLogin'/>자동로그인
               </li>
-              <li>비밀번호가 기억나지 않으신가요?</li>
+              <li>
+                <Link to='/findpw'>비밀번호가 기억나지 않으신가요?</Link>
+              </li>
             </ul>
           </div>
         </div>

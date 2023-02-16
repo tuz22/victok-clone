@@ -1,6 +1,6 @@
 import './../style/register.css'
 import { useState } from 'react';
-import AddressAPI from './addressAPI';
+import AddressAPI from './AddressAPI';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 

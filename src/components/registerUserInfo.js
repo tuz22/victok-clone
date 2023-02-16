@@ -1,5 +1,5 @@
 import './../style/register.css'
-import { EmailAlert, PwAlert, PwCheck } from '../components/registerAlert';
+import { EmailAlert, PwAlert, PwCheck } from './RegisterAlert';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 

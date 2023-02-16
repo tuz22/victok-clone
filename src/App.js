@@ -1,13 +1,14 @@
 import './default.css';
 import './App.css';
-import Header from './components/header';
-import Footer from './components/footer';
-import Banner from './components/banner';
-import Login from './pages/login';
-import Register from './pages/register';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Banner from './components/Banner';
+import Login from './pages/Login';
+import Register from './pages/Register';
 import { Route, Routes } from 'react-router-dom';
-import Welcome from './pages/welcome';
-import FindPw from './pages/findPw';
+import Welcome from './pages/Welcome';
+import FindPw from './pages/FindPw';
+import Locker from './pages/Locker';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
         }/>
         <Route path='/findpw' element={
           <FindPw />
+        }/>
+        <Route path='/locker/status' element={
+          <Locker />
         }/>
       </Routes>
       <Footer />

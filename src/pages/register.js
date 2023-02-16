@@ -1,10 +1,10 @@
 import './../style/register.css'
 // import { EmailAlert, PwAlert, PwCheck } from '../components/registerAlert';
 import { useState } from 'react';
-import RegisterUser from '../components/registerUser';
-import TermsUse from '../components/termsUse';
-import RegisterUserInfo from '../components/registerUserInfo';
-import FacilityInfo from '../components/facilityInfo';
+import RegisterUser from '../components/RegisterUser';
+import TermsUse from '../components/TermsUse';
+import RegisterUserInfo from '../components/RegisterUserInfo';
+import FacilityInfo from '../components/FacilityInfo';
 
 function Register() {
   const [index, setIndex] = useState(0)

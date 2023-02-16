@@ -1,5 +1,5 @@
 import './../style/register.css'
-import { EmailAlert, PwAlert, PwCheck } from '../components/registerAlert';
+import { EmailAlert, NextBtn, PwAlert, PwCheck } from './RegisterAlert';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addAccount } from '../store/userSlice';
@@ -27,10 +27,24 @@ function RegisterUser({ onChangeIndex }) {
     setPwCheck(e.target.value)
   }
 
+  // redux로 계정정보 저장
   const onAddAccount = () => {
     dispatch(addAccount({ id: id, email: account.email, pw: account.pw }))
-    onChangeIndex()
     console.log('완료?')
+  }
+
+  const regexEmail = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  const regexPw = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/;
+  
+  const nextBtn = () => {
+    const emailTest = regexEmail.test(account.email);
+    const pwTest = regexPw.test(account.pw);
+    const pwCheckTest = account.pw === pwCheck;
+
+    if (emailTest && pwTest && pwCheckTest) {
+      onAddAccount()
+      onChangeIndex()
+    }
   }
 
   return (
@@ -57,7 +71,7 @@ function RegisterUser({ onChangeIndex }) {
             <input type={checkType} className='pw-check' placeholder='비밀번호 확인을 입력해주세요.' onChange={onChangePwCheck}/>
             <PwCheck pw={account.pw} pwCheck={pwCheck}/>
           </article>
-          <button onClick={onAddAccount}>다음</button>
+          <button onClick={nextBtn}>다음</button>
         </div>
       </div>
     </section>

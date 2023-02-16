@@ -1,16 +1,48 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import './../style/login.css'
 
 function Login() {
+  const userData = useSelector((state) => state.user)
+  const [account, setAccount] = useState([])
+  const [id, setId] = useState(0)
+  const navigate = useNavigate()
+
+  const onLoginAccount = (e) => {
+    setAccount({
+      ...account,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const onCheckLogin = () => {
+    userData.map((data, i) => {
+      console.log(userData[i])
+      if (data.email === account.email) {
+        console.log('이메일 일치')
+        setId(i)
+        if (userData[`${id}`].pw === account.pw) {
+          console.log('비밀번호도 일치')
+          navigate('/')
+          alert('로그인 완료')
+        }
+      }
+      console.log('불일치')
+    })
+  }
+console.log(account)
+console.log(account.email)
+
   return (
     <section>
       <div className='login-form'>
         <p className='login-img'>로그인</p>
         <div className='input-form'>
           <div className='check-input'>
-            <input placeholder='이메일을 입력해 주세요.'/>
-            <input placeholder='비밀번호를 입력해 주세요.'/>
-            <button>로그인</button>
+            <input placeholder='이메일을 입력해 주세요.' name='email' onChange={onLoginAccount}/>
+            <input type='password' placeholder='비밀번호를 입력해 주세요.' name='pw' onChange={onLoginAccount}/>
+            <button onClick={onCheckLogin}>로그인</button>
           </div>
           <div className='check-pw'>
             <ul>

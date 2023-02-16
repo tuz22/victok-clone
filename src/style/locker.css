@@ -1,0 +1,42 @@
+/* locker - 라카현황 */
+.locker-form {
+  /* width: 1200px; */
+  /* height: 80%; */
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 0 14% ;
+}
+.locker-form article {
+  background: white;
+  width: 1200px;
+  height: 300px;
+  padding: 40px 20px 20px 30px;
+  margin: 20px 0 10px 0;
+}
+.locker-form h2 {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+.locker-form th, tr, td {
+  border: 1px solid #E3E3E3;
+}
+.locker-form table {
+  width: 1140px;
+  /* height: 52px; */
+}
+.locker-form thead {
+  height: 52px;
+  background: #F4F5FE;
+  color: #162D59;
+  font-size: 14px;
+}
+.locker-form thead tr {
+  border-top: 2px solid #162D59;
+}
+.locker-form tbody tr {
+  height: 52px;
+  text-align: center;
+}

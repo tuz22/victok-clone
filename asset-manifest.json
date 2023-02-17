@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/victok-clone/static/css/main.f5788c47.css",
+    "main.js": "/victok-clone/static/js/main.b804a026.js",
+    "static/js/787.acaca1cc.chunk.js": "/victok-clone/static/js/787.acaca1cc.chunk.js",
+    "static/media/bg.jpg": "/victok-clone/static/media/bg.df8f3409c4b09c0b3bbf.jpg",
+    "static/media/logo.svg": "/victok-clone/static/media/logo.b9aba751e33c85c46531.svg",
+    "static/media/그룹 6961.svg": "/victok-clone/static/media/그룹 6961.2e5b4537290432d2004e72eb86322188.svg",
+    "index.html": "/victok-clone/index.html",
+    "main.f5788c47.css.map": "/victok-clone/static/css/main.f5788c47.css.map",
+    "main.b804a026.js.map": "/victok-clone/static/js/main.b804a026.js.map",
+    "787.acaca1cc.chunk.js.map": "/victok-clone/static/js/787.acaca1cc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5788c47.css",
+    "static/js/main.b804a026.js"
+  ]
+}

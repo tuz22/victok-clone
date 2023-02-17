@@ -6,8 +6,8 @@ function Header() {
   const [tab, setTab] = useState();
   const tabData = [
     // {id: 0, title: '로고', link: '/'}, 
-    {id: 0, title: '라카설정', link: '/'}, 
-    {id: 1, title: '라카현황', link: '/locker/status'},
+    {id: 0, title: '라카설정', link: '/lockersetting'}, 
+    {id: 1, title: '라카현황', link: '/lockershow'},
     {id: 2, title: '전체회원', link: '/'},
   ];
   const[active, setActive] = useState();

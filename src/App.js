@@ -8,7 +8,8 @@ import Register from './pages/Register';
 import { Route, Routes } from 'react-router-dom';
 import Welcome from './pages/Welcome';
 import FindPw from './pages/FindPw';
-import Locker from './pages/Locker';
+import Lockershow from './pages/Lockershow';
+import Lockersetting from './pages/Lockersetting';
 
 function App() {
   return (
@@ -30,8 +31,11 @@ function App() {
         <Route path='/findpw' element={
           <FindPw />
         }/>
-        <Route path='/locker/status' element={
-          <Locker />
+        <Route path='/lockershow' element={
+          <Lockershow />
+        }/>
+        <Route path='/lockersetting' element={
+          <Lockersetting />
         }/>
       </Routes>
       <Footer />

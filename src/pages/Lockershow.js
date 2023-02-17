@@ -6,9 +6,9 @@ const lockerStatus = [
   {id: 0, name: '홍길동', phone: '010-1234-1234', type: '일반', numb: 123, startDate: '21.12.23', endDate: '21.12.24', remainingDate: 1},
   {id: 1, name: '홍길동', phone: '010-1234-1234', type: '일반', numb: 123, startDate: '21.09.23', endDate: '21.12.24', remainingDate: 93},
 ]
-function Locker() {
+
+function Lockershow() {
   const [checkedArr, setCheckedArr] = useState([])
-  let [count, setCount] = useState(0)
   // const [display, setDisplay] = useState('none')
 
   const singleCheck = (checked, id) => {
@@ -28,10 +28,6 @@ function Locker() {
     } else {
       setCheckedArr([])
     }
-  }
-
-  const onCount = () => {
-    setCount++
   }
 
   return (
@@ -59,7 +55,7 @@ function Locker() {
                   }
                 </>
               ))}
-              {lockerStatus.map((data, i) => (console.log(data.remainingDate < 31)&&data.remainingDate < 31 === null 
+              {lockerStatus.map((data, i) => (data.remainingDate < 31 === null 
               ?
                 <div className='locker-30days-null'>
                   <p className='mark-icon'><img src={markIcon}/></p>
@@ -95,22 +91,22 @@ function Locker() {
               </div>
               <div className='right-btn'>
                 <input placeholder='이름 / 연락처 빠른 검색'/>
-                <button className='add-btn'>추가</button>
-                <button className='select-del-btn'>선택 삭제</button>
+                <button className='add-btn'>이용자 추가</button>
+                {/* <button className='select-del-btn'>선택 삭제</button> */}
               </div>
             </div>
             <table>
               <thead>
                 <tr>
-                  <th>
-                  <div className='check-list-input'>
-                    <input type='checkbox' id='checkAll' 
-                      onChange={(e) => allCheck(e.target.checked)} 
-                      checked={checkedArr.length === lockerStatus.length ? true : false}
-                    />
-                    <label for='checkAll'/>
+                  <th className='checkbox-th'>
+                    <div className='check-list-input'>
+                      <input type='checkbox' id='checkAll' 
+                        onChange={(e) => allCheck(e.target.checked)} 
+                        checked={checkedArr.length === lockerStatus.length ? true : false}
+                      />
+                      <label for='checkAll'/>
                     </div>
-                    </th>
+                  </th>
                   <th>회원이름</th>
                   <th>핸드폰번호</th>
                   <th>라카구분</th>
@@ -151,4 +147,4 @@ function Locker() {
     </>
   )
 }
-export default Locker;
+export default Lockershow;
